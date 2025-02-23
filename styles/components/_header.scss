@@ -1,0 +1,48 @@
+.header {
+    background-color: $background-color;
+    padding: $spacing-md 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    &__container {
+        @include container;
+        @include flex-between;
+    }
+
+    &__logo {
+        width: 120px;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__nav {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__actions {
+        @include flex-center;
+        gap: $spacing-md;
+    }
+
+    &__user {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        @include flex-center;
+        cursor: pointer;
+
+        &-icon {
+            color: $text-color;
+            font-size: $font-size-xl;
+        }
+    }
+}
